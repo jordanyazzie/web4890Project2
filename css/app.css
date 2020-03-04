@@ -1,0 +1,68 @@
+.box{
+    width: 600px;
+    border: solid white 3px;
+    border-radius: 15px;
+    background: rgb(9,207,200);
+    background: linear-gradient(19deg, rgba(9,207,200,1) 25%, rgba(107,45,253,1) 100%);
+    color: whitesmoke;
+
+}
+.subtitle{
+    font-size: 25px;
+}
+.subtext{
+    font-size: 20px;
+}
+.resultbox{
+    border-radius: 10px;
+    margin: auto;
+    font-size: 25px;
+    background-color: rgba(255,255,255,1);
+    color: black;
+}
+.r-btn{
+     border: solid 3px white;
+     background-color: white;
+     letter-spacing: 1px;
+     border-radius: 8px;
+ }
+.r-btn:hover{
+     background-color: rgba(255,255,255,0);
+     color: white;
+ }
+.rr-btn:hover{
+    background-color: rgba(255,255,255,0);
+    color: white;
+}
+.rr-btn{
+    border: solid 3px white;
+    background-color: white;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    width: 45%;
+}
+.line{
+    border: solid 1.5px white;
+}
+
+.question{
+    font-size: 20px;
+}
+.choicebox{
+    border-top: solid 3px white;
+    border-bottom: solid 3px white;
+}
+
+.choicebox-right{
+     border-right: solid 1.5px white;
+ }
+.choicebox-left{
+    border-left: solid 1.5px white;
+}
+.spaceing{
+letter-spacing: 1px;
+}
+
+#09cfc8
+
+#6b2dfd

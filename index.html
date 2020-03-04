@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eating Out App</title>
+  <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div id="app" class="text-center box mt-3 ml-auto mr-auto">
+
+  <section>
+    <h1 class="font-weight-light spaceing">What to Eat App</h1>
+    <p class="subtitle font-weight-light">Can't decide what to eat?<br>Let me make a suggestion!</p>
+  </section>
+
+  <section v-show="sStart" class="mb-3">
+    <div>
+      <button @click="sStart = !sStart, sOutIn = !sOutIn" class="btn r-btn">Get Started</button>
+    </div>
+  </section>
+
+  <section v-show="!sOutIn" class="mb-3">
+    <hr class="line">
+    <h5 class="font-weight-light">{{pleaseSelect}}</h5>
+  </section>
+
+  <section class="row">
+    <div v-show="!sOutIn" class="col-6 choicebox choicebox-right p-3">
+      <div v-show="!sOut">
+        <h3>Eating out</h3>
+      </div>
+      <div v-show="!sIn">
+        <h3>Stay In</h3>
+      </div>
+      <p class="question font-weight-light">Eating out? or Staying in?</p>
+      <button @click="sOut = false, sIn = true, showResults" class="btn r-btn">Eating Out</button>
+      <button @click="sIn = false, sOut = true, showResults" class="btn r-btn">Staying In</button>
+    </div>
+
+    <div v-show="!sOutIn" class="col-6 choicebox choicebox-left p-3">
+      <div v-show="!sHealthy">
+        <h3>Healthy</h3>
+      </div>
+      <div v-show="!sUnhealthy">
+        <h3>Splurge</h3>
+      </div>
+      <p class="question font-weight-light">Healthy? or are we Splurging?</p>
+      <button @click="sHealthy = false, sUnhealthy = true, showResults" class="btn r-btn">Healthy</button>
+      <button @click="sUnhealthy = false, sHealthy = true, showResults" class="btn r-btn">Splurge</button>
+    </div>
+  </section>
+
+  <section v-show="!sOutIn" class="mt-3">
+    <button @click="results" class="btn rr-btn">View Results</button>
+
+    <p class="resultbox m-3 p-3 pr-4 pl-4 font-weight-light ">{{finalResult}}</p>
+
+
+  </section>
+
+</div>
+
+
+<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="css/bootstrap.js"></script>
+</body>
+</html>
